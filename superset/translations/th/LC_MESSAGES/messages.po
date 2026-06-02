@@ -18911,12 +18911,6 @@ msgstr "ลงทะเบียน"
 msgid "Registration date"
 msgstr "วันที่ลงทะเบียน"
 
-# Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: cs, fr, ja,
-# lv, ru, sk, uk]
-#, fuzzy
-msgid "Registration hash"
-msgstr "แฮชการลงทะเบียน"
-
 # Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: cs, ja, ru,
 # sk, uk]
 #, fuzzy

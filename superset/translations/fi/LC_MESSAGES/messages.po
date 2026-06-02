@@ -19129,12 +19129,6 @@ msgstr "Rekisteröidy"
 msgid "Registration date"
 msgstr "Rekisteröintipäivä"
 
-# Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: cs, fr, ja,
-# lv, ru, sk, uk]
-#, fuzzy
-msgid "Registration hash"
-msgstr "Rekisteröinti-hash"
-
 # Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: cs, ja, ru,
 # sk, uk]
 #, fuzzy
