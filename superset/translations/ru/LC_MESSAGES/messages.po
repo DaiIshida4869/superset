@@ -1426,7 +1426,9 @@ msgstr "Оповещение не сработало"
 msgid "Alert fired during grace period."
 msgstr "Оповещение сработало во время перерыва в работе планировщика"
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Произошла ошибка при выполнении запроса для для отправки оповещения"
 
 msgid "Alert is active"
@@ -1630,7 +1632,9 @@ msgstr "Произошла ошибка"
 msgid "An error occurred saving dataset"
 msgstr "Произошла ошибка при сохранении датасета"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Произошла ошибка при запуске запроса, возвращающего оповещение"
 
 msgid "An error occurred while accessing the copy link."

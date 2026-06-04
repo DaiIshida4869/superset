@@ -1419,7 +1419,9 @@ msgstr "I rahua te matohi"
 msgid "Alert fired during grace period."
 msgstr "Matohi i pāhia i te wā aroha."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "I kitea e te Matohi he hapa i te whakatutukitanga o tētahi pātai."
 
 msgid "Alert is active"
@@ -1628,7 +1630,9 @@ msgstr "I puta he hapa"
 msgid "An error occurred saving dataset"
 msgstr "I puta he hapa i te tiakitanga o te rārangi raraunga"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "I puta he hapa i te whakatutukitanga o te pātai matohi"
 
 msgid "An error occurred while accessing the copy link."

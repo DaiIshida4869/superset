@@ -1444,7 +1444,9 @@ msgstr "Brīdinājums neizdevās"
 msgid "Alert fired during grace period."
 msgstr "Brīdinājums aktivizējās labvēlības periodā."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Brīdinājums atrada kļūdu, izpildot vaicājumu."
 
 msgid "Alert is active"
@@ -1647,7 +1649,9 @@ msgstr "Radās kļūda"
 msgid "An error occurred saving dataset"
 msgstr "Radās kļūda, saglabājot datu kopu"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Radās kļūda, izpildot brīdinājuma vaicājumu"
 
 msgid "An error occurred while accessing the copy link."

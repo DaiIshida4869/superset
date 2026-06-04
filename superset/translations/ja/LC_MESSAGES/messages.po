@@ -1335,7 +1335,9 @@ msgstr "アラート失敗"
 msgid "Alert fired during grace period."
 msgstr "猶予期間中にアラートが発生しました。"
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "クエリの実行中にアラートがエラーを検出しました。"
 
 msgid "Alert is active"
@@ -1523,7 +1525,9 @@ msgstr "エラーが発生しました"
 msgid "An error occurred saving dataset"
 msgstr "データセットの保存中にエラーが発生しました"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "アラートクエリの実行中にエラーが発生しました"
 
 msgid "An error occurred while accessing the copy link."

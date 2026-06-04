@@ -1417,7 +1417,9 @@ msgstr "Waarschuwing mislukt"
 msgid "Alert fired during grace period."
 msgstr "Waarschuwing afgevuurd tijdens grace period."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Alert heeft een fout gevonden tijdens het uitvoeren van een query."
 
 #, fuzzy
@@ -1625,7 +1627,9 @@ msgstr "Er is een fout opgetreden"
 msgid "An error occurred saving dataset"
 msgstr "Er is een fout opgetreden bij het opslaan van dataset"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Er is een fout opgetreden bij het uitvoeren van de waarschuwing query"
 
 #, fuzzy

@@ -1457,7 +1457,9 @@ msgstr "Upozornění selhalo"
 msgid "Alert fired during grace period."
 msgstr "Upozornění bylo spuštěno během ochranné lhůty."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Upozornění nalezlo chybu při provádění dotazu."
 
 msgid "Alert is active"
@@ -1662,7 +1664,9 @@ msgstr "Došlo k chybě"
 msgid "An error occurred saving dataset"
 msgstr "Při ukládání sady dat došlo k chybě"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Při spuštění dotazu upozornění došlo k chybě"
 
 msgid "An error occurred while accessing the copy link."
