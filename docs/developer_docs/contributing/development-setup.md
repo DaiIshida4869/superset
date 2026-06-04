@@ -132,12 +132,13 @@ In that case, the easy solution is to nuke the postgres db and start fresh. Note
 state of the database will be gone after doing this, so be cautious.
 
 ```bash
-# first stop docker-compose if it's running
-docker-compose down
+# From the root of the repository
+# first stop docker compose if it's running
+docker compose down
 # delete the volume containing the database
 docker volume rm superset_db_home
-# restart docker-compose, which will init a fresh database and load examples
-docker-compose up
+# restart docker compose, which will init a fresh database and load examples
+docker compose up
 ```
 
 ### Running multiple instances
@@ -262,18 +263,21 @@ instance, but many people like to run that tooling from their host.
 Assuming you already have a way to setup your python environments
 like `pyenv`, `virtualenv` or something else, all you should have to
 do is to install our dev, pinned python requirements bundle, after installing
-the prerequisites mentioned in [OS Dependencies](https://superset.apache.org/docs/installation/pypi/#os-dependencies)
+the prerequisites mentioned in [OS Dependencies](https://superset.apache.org/docs/installation/pypi/#os-dependencies).
 
 ```bash
+# From the root of the repository
 pip install -r requirements/development.txt
 ```
 
 ### Git Hooks
 
 Superset uses Git pre-commit hooks courtesy of [pre-commit](https://pre-commit.com/).
-To install run the following:
+To install run the following from the root of the repository (requires the
+[Python environment](#python-environment) to be set up first):
 
 ```bash
+# From the root of the repository
 pre-commit install
 ```
 
@@ -379,9 +383,11 @@ functioning across environments.
 Make sure your machine meets the [OS dependencies](https://superset.apache.org/docs/installation/pypi#os-dependencies) before following these steps.
 You also need to install MySQL.
 
-Ensure that you are using Python version 3.9, 3.10 or 3.11, then proceed with:
+Ensure that you are using Python version 3.9, 3.10 or 3.11, then proceed with
+the following commands **from the root of the repository**:
 
 ```bash
+# From the root of the repository
 # Create a virtual environment and activate it (recommended)
 python3 -m venv venv # setup a python3 virtualenv
 source venv/bin/activate
@@ -494,7 +500,7 @@ We recommend using [nvm](https://github.com/nvm-sh/nvm) to manage your node envi
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
 
-in case it shows '-bash: nvm: command not found'
+# If you see '-bash: nvm: command not found', run the following lines first:
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -517,12 +523,14 @@ For those interested, you may also try out [avn](https://github.com/nvm-sh/nvm#d
 Install third-party dependencies listed in `package.json` via:
 
 ```bash
-# From the root of the repository
+# From the root of the repository, change into the frontend directory
 cd superset-frontend
 
 # Install dependencies from `package-lock.json`
 npm ci
 ```
+
+All subsequent `npm` commands in this section should be run from the `superset-frontend` directory.
 
 Note that Superset uses [Scarf](https://docs.scarf.sh) to capture telemetry/analytics about versions being installed, including the `scarf-js` npm package and an analytics pixel. As noted elsewhere in this documentation, Scarf gathers aggregated stats for the sake of security/release strategy and does not capture/retain PII. [You can read here](https://docs.scarf.sh/package-analytics/) about the `scarf-js` package, and various means to opt out of it, but you can opt out of the npm package _and_ the pixel by setting the `SCARF_ANALYTICS` environment variable to `false` or opt out of the pixel by adding this setting in `superset-frontent/package.json`:
 
@@ -582,20 +590,23 @@ The dev server by default starts at `http://localhost:9000` and proxies the back
 
 So a typical development workflow is the following:
 
-1. [run Superset locally](#flask-server) using Flask, on port `8088` — but don't access it directly,<br/>
+1. [Run Superset locally](#flask-server) using Flask, on port `8088` — but don't access it directly.
+   **Prerequisite:** complete the [Flask server](#flask-server) setup (virtual environment, `pip install`, `superset db upgrade`, etc.) first.
 
    ```bash
-   # Install Superset and dependencies, plus load your virtual environment first, as detailed above.
+   # From the root of the repository, with your virtual environment activated
    superset run -p 8088 --with-threads --reload --debugger --debug
    ```
 
-2. in parallel, run the Webpack dev server locally on port `9000`,<br/>
+2. In a **separate terminal**, run the Webpack dev server locally on port `9000`.
+   **Prerequisite:** complete the [Install dependencies](#install-dependencies) step (`npm ci`) first.
 
    ```bash
+   # From the superset-frontend directory
    npm run dev-server
    ```
 
-3. access `http://localhost:9000` (the Webpack server, _not_ Flask) in your web browser. This will use the hot-reloading front-end assets from the Webpack development server while redirecting back-end queries to Flask/Superset: your changes on Superset codebase — either front or back-end — will then be reflected live in the browser.
+3. Access `http://localhost:9000` (the Webpack server, _not_ Flask) in your web browser. This will use the hot-reloading front-end assets from the Webpack development server while redirecting back-end queries to Flask/Superset: your changes on Superset codebase — either front or back-end — will then be reflected live in the browser.
 
 It's possible to change the Webpack server settings:
 
@@ -658,9 +669,12 @@ The current status of the usability of each flag (stable vs testing, etc) can be
 
 ## Git Hooks
 
-Superset uses Git pre-commit hooks courtesy of [pre-commit](https://pre-commit.com/). To install run the following:
+Superset uses Git pre-commit hooks courtesy of [pre-commit](https://pre-commit.com/).
+If you followed the [Installing Development Tools](#installing-development-tools) section
+above, you already have pre-commit installed. Otherwise, install it now:
 
 ```bash
+# From the root of the repository
 pip3 install -r requirements/development.txt
 pre-commit install
 ```
@@ -753,9 +767,11 @@ secrets.
 
 #### Unit Tests
 
-For unit tests located in `tests/unit_tests/`, it's usually easy to simply run the script locally using:
+For unit tests located in `tests/unit_tests/`, it's usually easy to simply run the script locally
+from the root of the repository (with your virtual environment activated):
 
 ```bash
+# From the root of the repository
 pytest tests/unit_tests/*
 ```
 
@@ -789,16 +805,17 @@ pytest ./link_to_test.py
 
 ### Frontend Testing
 
-We use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) to test TypeScript. Tests can be run with:
+We use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) to test TypeScript. Tests can be run from the `superset-frontend` directory (requires [frontend dependencies](#install-dependencies) to be installed first):
 
 ```bash
-cd superset-frontend
+# From the superset-frontend directory
 npm run test
 ```
 
 To run a single test file:
 
 ```bash
+# From the superset-frontend directory
 npm run test -- path/to/file.js
 ```
 
