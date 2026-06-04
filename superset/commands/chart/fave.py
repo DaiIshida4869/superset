@@ -18,37 +18,32 @@ import logging
 from functools import partial
 
 from superset import security_manager
-from superset.commands.base import BaseCommand
 from superset.commands.chart.exceptions import (
     ChartAccessDeniedError,
     ChartFaveError,
     ChartNotFoundError,
 )
+from superset.commands.favorite import BaseAddFavoriteCommand
 from superset.daos.chart import ChartDAO
 from superset.exceptions import SupersetSecurityException
-from superset.models.slice import Slice
 from superset.utils.decorators import on_error, transaction
 
 logger = logging.getLogger(__name__)
 
 
-class AddFavoriteChartCommand(BaseCommand):
-    def __init__(self, chart_id: int) -> None:
-        self._chart_id = chart_id
-        self._chart: Slice | None = None
+class AddFavoriteChartCommand(BaseAddFavoriteCommand):
+    dao = ChartDAO
 
     @transaction(on_error=partial(on_error, reraise=ChartFaveError))
     def run(self) -> None:
-        self.validate()
-        if self._chart:
-            return ChartDAO.add_favorite(self._chart)
+        super().run()
 
     def validate(self) -> None:
-        chart = ChartDAO.find_by_id(self._chart_id)
+        chart = ChartDAO.find_by_id(self._model_id)
         if not chart:
             raise ChartNotFoundError()
         try:
             security_manager.raise_for_access(chart=chart)
         except SupersetSecurityException as ex:
             raise ChartAccessDeniedError() from ex
-        self._chart = chart
+        self._model = chart
