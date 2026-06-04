@@ -225,9 +225,36 @@ pre-commit install
 This will install the hooks in your local repository. From now on, a series of checks will
 automatically run whenever you make a Git commit.
 
+#### Prerequisites
+
+Before running pre-commit, make sure your Python virtual environment is active:
+
+```bash
+# Activate the virtual environment used for Superset development, e.g.:
+source venv/bin/activate
+```
+
+If pre-commit or any of its hooks report "command not found" errors, it usually
+means the virtual environment is not activated.
+
 #### Running Pre-commit Manually
 
 You can also run the pre-commit checks manually in various ways:
+
+- **Run pre-commit on staged files only (fast feedback loop):**
+
+  By default, `pre-commit run` (without extra flags) checks only the files you have
+  staged with `git add`. This is the fastest way to validate your changes before committing:
+
+  ```bash
+  git add path/to/changed_file.py
+  pre-commit run
+  ```
+
+  :::note
+  You must stage files with `git add` before running `pre-commit run`. If no files
+  are staged, pre-commit will report nothing to check and exit without running any hooks.
+  :::
 
 - **Run pre-commit on all files (same as CI):**
 
@@ -238,6 +265,7 @@ You can also run the pre-commit checks manually in various ways:
   ```
 
   This is the same set of checks that will run during CI, ensuring your changes meet the project's standards.
+  It is slower than running on staged files only, but useful for verifying a clean state.
 
 - **Run pre-commit on a specific file:**
 
@@ -265,6 +293,17 @@ You can also run the pre-commit checks manually in various ways:
 
   Replace `<hook_id>` with the ID of the specific hook you want to run. You can find the list
   of available hooks in the `.pre-commit-config.yaml` file.
+
+#### Handling Auto-fixes
+
+Some hooks (e.g., trailing-whitespace, black, prettier) automatically fix files.
+When this happens, pre-commit will exit with a failure and the fixed files will be
+unstaged. Re-stage the fixed files and re-run:
+
+```bash
+git add -u
+pre-commit run
+```
 
 ## Working with LLMs
 
@@ -611,6 +650,13 @@ pre-commit install
 ```
 
 A series of checks will now run when you make a git commit.
+
+:::tip
+Make sure your virtual environment is active before running pre-commit. When
+running hooks manually, remember that `pre-commit run` (no flags) only checks
+**staged** files — use `git add` first. Use `pre-commit run --all-files` to check
+the entire repository (same scope as CI).
+:::
 
 ## Linting
 
