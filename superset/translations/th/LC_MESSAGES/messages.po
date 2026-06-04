@@ -2321,7 +2321,9 @@ msgstr "การแจ้งเตือนเกิดขึ้นในช่
 # Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: ar, ca, cs,
 # de, es, fa, fr, ja, lv, mi, nl, pl, pt_BR, ru, sk, sl, uk, zh, zh_TW]
 #, fuzzy
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "การแจ้งเตือนพบข้อผิดพลาดขณะดำเนินการสืบค้นข้อมูล"
 
 # Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: ca, cs, de,
@@ -2684,12 +2686,14 @@ msgstr "เกิดข้อผิดพลาด"
 msgid "An error occurred saving dataset"
 msgstr "เกิดข้อผิดพลาดขณะบันทึกชุดข้อมูล"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "เกิดข้อผิดพลาดขณะรันคิวรีการแจ้งเตือน"
+
 # Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: ar, ca, cs,
 # de, es, fa, fr, ja, lv, mi, nl, ru, sk, sl, uk]
 #, fuzzy
-msgid "An error occurred when running alert query"
-msgstr "เกิดข้อผิดพลาดขณะรันคิวรีการแจ้งเตือน"
-
 # Machine-translated via backfill_po.py (claude-sonnet-4-6) [refs: ca, cs, es,
 # fr, ja, lv, mi, ru, sk, uk]
 #, fuzzy

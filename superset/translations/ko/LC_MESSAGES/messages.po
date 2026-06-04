@@ -1359,7 +1359,9 @@ msgstr "테이블 명"
 msgid "Alert fired during grace period."
 msgstr ""
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr ""
 
 msgid "Alert is active"
@@ -1546,10 +1548,12 @@ msgstr ""
 msgid "An error occurred saving dataset"
 msgstr ""
 
-#, fuzzy
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "데이터 베이스 목록을 가져오는 도중 에러가 발생하였습니다."
 
+#, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "데이터 베이스 목록을 가져오는 도중 에러가 발생하였습니다."

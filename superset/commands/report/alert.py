@@ -228,7 +228,10 @@ class AlertCommand(BaseCommand):
             # The exception message here can reveal to much information to malicious
             # users, so we raise a generic message.
             raise AlertQueryError(
-                message=_("An error occurred when running alert query")
+                message=_(
+                    "The alert query could not be executed. "
+                    "Check that the SQL is valid and the database is reachable."
+                )
             ) from ex
 
     def validate(self) -> None:

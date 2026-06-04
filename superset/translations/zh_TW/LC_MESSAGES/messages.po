@@ -1378,7 +1378,9 @@ msgstr "告警失敗"
 msgid "Alert fired during grace period."
 msgstr "在寬限期内觸發告警。"
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "告警在執行查詢時發現錯誤。"
 
 #, fuzzy
@@ -1573,10 +1575,12 @@ msgstr "發生了一個錯誤"
 msgid "An error occurred saving dataset"
 msgstr "保存數據集時發生錯誤"
 
-#, fuzzy
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "精简日誌時出錯 "
 
+#, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "訪問值時出錯。"

@@ -1421,7 +1421,9 @@ msgstr "هشدار ناموفق بود"
 msgid "Alert fired during grace period."
 msgstr "هشدار در طول دوره مرحمت فعال شد."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "هشدار: در حین اجرای یک کوئری خطایی یافت شد."
 
 msgid "Alert is active"
@@ -1623,7 +1625,9 @@ msgstr "یک خطا رخ داد"
 msgid "An error occurred saving dataset"
 msgstr "خطایی در هنگام ذخیره مجموعه داده رخ داد"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "هنگام اجرای کوئریی هشدار، خطایی رخ داد."
 
 #, fuzzy

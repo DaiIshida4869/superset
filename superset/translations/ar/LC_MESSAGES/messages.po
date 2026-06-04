@@ -1463,7 +1463,9 @@ msgstr "فشل التنبيه"
 msgid "Alert fired during grace period."
 msgstr "تم إطلاق التنبيه خلال فترة السماح."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "عثر التنبيه على خطأ أثناء تنفيذ استعلام."
 
 #, fuzzy
@@ -1663,7 +1665,9 @@ msgstr "حدث خطأ"
 msgid "An error occurred saving dataset"
 msgstr "حدث خطأ أثناء حفظ مجموعة البيانات"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "حدث خطأ عند تشغيل استعلام التنبيه"
 
 #, fuzzy

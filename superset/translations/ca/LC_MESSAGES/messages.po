@@ -1448,7 +1448,9 @@ msgstr "L'alerta ha fallat"
 msgid "Alert fired during grace period."
 msgstr "L'alerta s'ha activat durant el període de gràcia."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "L'alerta ha trobat un error mentre executava una consulta."
 
 msgid "Alert is active"
@@ -1657,7 +1659,9 @@ msgstr "S'ha produït un error"
 msgid "An error occurred saving dataset"
 msgstr "S'ha produït un error desant el conjunt de dades"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "S'ha produït un error quan s'executava la consulta de l'alerta"
 
 msgid "An error occurred while accessing the copy link."

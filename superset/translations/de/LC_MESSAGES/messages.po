@@ -1463,7 +1463,9 @@ msgstr "Alarm fehlgeschlagen"
 msgid "Alert fired during grace period."
 msgstr "Alarm während Karenzzeit ausgelöst."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Alarm ist beim Ausführen einer Abfrage auf einen Fehler gestoßen."
 
 msgid "Alert is active"
@@ -1671,7 +1673,9 @@ msgstr "Ein Fehler ist aufgetreten"
 msgid "An error occurred saving dataset"
 msgstr "Beim Speichern des Datensatz ist ein Fehler aufgetreten"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "Bei der Ausführung der Alarm-Abfrage ist ein Fehler aufgetreten"
 
 #, fuzzy

@@ -1483,7 +1483,9 @@ msgstr "Falha no alerta"
 msgid "Alert fired during grace period."
 msgstr "Alerta disparado durante o período de carência."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "O alerta encontrou um erro durante a execução de uma consulta."
 
 #, fuzzy
@@ -1696,10 +1698,12 @@ msgstr "Um erro ocorreu"
 msgid "An error occurred saving dataset"
 msgstr "Ocorreu um erro ao salvar conjunto de dados"
 
-#, fuzzy
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "Ocorreu um erro ao podar os registos"
 
+#, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Ocorreu um erro ao acessar o valor."

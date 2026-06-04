@@ -1370,7 +1370,9 @@ msgstr "Nome Completo"
 msgid "Alert fired during grace period."
 msgstr ""
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr ""
 
 msgid "Alert is active"
@@ -1559,10 +1561,12 @@ msgstr ""
 msgid "An error occurred saving dataset"
 msgstr "Errore nel creare il datasource"
 
-#, fuzzy
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "Errore nel rendering della visualizzazione: %s"
 
+#, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Errore nel creare il datasource"

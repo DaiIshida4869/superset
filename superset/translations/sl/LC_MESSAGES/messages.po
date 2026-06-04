@@ -1467,7 +1467,9 @@ msgstr "Opozorilo ni uspelo"
 msgid "Alert fired during grace period."
 msgstr "Opozorilo sproženo med obdobjem mirovanja."
 
-msgid "Alert found an error while executing a query."
+msgid ""
+"The alert query failed to execute. Verify that the SQL is valid and the "
+"database is accessible."
 msgstr "Opozorilo je našlo napako pri izvajanju poizvedbe."
 
 msgid "Alert is active"
@@ -1674,7 +1676,9 @@ msgstr "Prišlo je do napake"
 msgid "An error occurred saving dataset"
 msgstr "Pri shranjevanju podatkovnega seta je prišlo do napake"
 
-msgid "An error occurred when running alert query"
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
 msgstr "Pri zaganjanju poizvedbe za opozorilo je prišlo do napake"
 
 #, fuzzy
