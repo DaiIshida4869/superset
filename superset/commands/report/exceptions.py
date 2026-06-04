@@ -257,7 +257,10 @@ class AlertQueryError(CommandException):
     """
 
     status = 400
-    message = _("Alert found an error while executing a query.")
+    message = _(
+        "The alert query failed to execute. "
+        "Verify that the SQL is valid and the database is accessible."
+    )
 
 
 class AlertQueryTimeout(CommandException):
