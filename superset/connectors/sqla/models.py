@@ -854,7 +854,7 @@ class AnnotationDatasource(BaseDatasource):
         except Exception as ex:  # pylint: disable=broad-except
             df = pd.DataFrame()
             status = QueryStatus.FAILED
-            logger.exception(ex)
+            logger.exception("Failed to execute annotation query")
             error_message = utils.error_msg_from_exception(ex)
         return QueryResult(
             status=status,
@@ -1446,7 +1446,7 @@ class SqlaTable(
         name = escape(self.name)
         url = escape(self.explore_url)
         anchor = f'<a target="_blank" href="{url}">{name}</a>'
-        return Markup(anchor)
+        return Markup(anchor)  # noqa: S704
 
     def get_catalog_perm(self) -> str | None:
         """Returns catalog permission if present, database one otherwise."""

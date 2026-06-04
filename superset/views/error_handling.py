@@ -114,15 +114,15 @@ def handle_api_exception(
                 utils.error_msg_from_exception(ex), status=ex.status
             )
         except HTTPException as ex:
-            logger.exception(ex)
+            logger.exception("HTTP error in API call")
             return json_error_response(
                 utils.error_msg_from_exception(ex), status=cast(int, ex.code)
             )
         except (exc.IntegrityError, exc.DatabaseError, exc.DataError) as ex:
-            logger.exception(ex)
+            logger.exception("Database error in API call")
             return json_error_response(utils.error_msg_from_exception(ex), status=422)
         except Exception as ex:  # pylint: disable=broad-except
-            logger.exception(ex)
+            logger.exception("Unexpected error in API call")
             return json_error_response(utils.error_msg_from_exception(ex))
 
     return functools.update_wrapper(wraps, f)

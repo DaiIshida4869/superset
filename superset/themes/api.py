@@ -351,7 +351,7 @@ class ThemeRestApi(BaseSupersetModelRestApi):
             return self.response_403()
         except Exception as ex:
             logger.exception("Unexpected error in PUT /theme/%s", pk)
-            return self.response_422(message=str(ex))
+            return self.response_500(message=str(ex))
 
     @expose("/", methods=("POST",))
     @protect()
@@ -410,7 +410,7 @@ class ThemeRestApi(BaseSupersetModelRestApi):
             return self.response(201, id=new_theme.id, result=item)
         except Exception as ex:
             logger.exception("Unexpected error in POST /theme")
-            return self.response_422(message=str(ex))
+            return self.response_500(message=str(ex))
 
     @transaction()
     def _create_theme(self, item: dict[str, Any]) -> Theme:
@@ -559,9 +559,9 @@ class ThemeRestApi(BaseSupersetModelRestApi):
     @safe
     @statsd_metrics
     @event_logger.log_this_with_context(
-        action=lambda self,
-        *args,
-        **kwargs: f"{self.__class__.__name__}.set_system_default",
+        action=lambda self, *args, **kwargs: (
+            f"{self.__class__.__name__}.set_system_default"
+        ),
         log_to_statsd=False,
     )
     def set_system_default(self, pk: int) -> Response:
@@ -619,16 +619,17 @@ class ThemeRestApi(BaseSupersetModelRestApi):
         except ThemeNotFoundError:
             return self.response_404()
         except Exception as ex:
-            return self.response_422(message=str(ex))
+            logger.exception("Unexpected error in PUT /theme/%s/set_system_default", pk)
+            return self.response_500(message=str(ex))
 
     @expose("/<int:pk>/set_system_dark", methods=("PUT",))
     @protect()
     @safe
     @statsd_metrics
     @event_logger.log_this_with_context(
-        action=lambda self,
-        *args,
-        **kwargs: f"{self.__class__.__name__}.set_system_dark",
+        action=lambda self, *args, **kwargs: (
+            f"{self.__class__.__name__}.set_system_dark"
+        ),
         log_to_statsd=False,
     )
     def set_system_dark(self, pk: int) -> Response:
@@ -686,16 +687,17 @@ class ThemeRestApi(BaseSupersetModelRestApi):
         except ThemeNotFoundError:
             return self.response_404()
         except Exception as ex:
-            return self.response_422(message=str(ex))
+            logger.exception("Unexpected error in PUT /theme/%s/set_system_dark", pk)
+            return self.response_500(message=str(ex))
 
     @expose("/unset_system_default", methods=("DELETE",))
     @protect()
     @safe
     @statsd_metrics
     @event_logger.log_this_with_context(
-        action=lambda self,
-        *args,
-        **kwargs: f"{self.__class__.__name__}.unset_system_default",
+        action=lambda self, *args, **kwargs: (
+            f"{self.__class__.__name__}.unset_system_default"
+        ),
         log_to_statsd=False,
     )
     def unset_system_default(self) -> Response:
@@ -736,16 +738,17 @@ class ThemeRestApi(BaseSupersetModelRestApi):
             ClearSystemDefaultThemeCommand().run()
             return self.response(200, result="success")
         except Exception as ex:
-            return self.response_422(message=str(ex))
+            logger.exception("Unexpected error in DELETE /theme/unset_system_default")
+            return self.response_500(message=str(ex))
 
     @expose("/unset_system_dark", methods=("DELETE",))
     @protect()
     @safe
     @statsd_metrics
     @event_logger.log_this_with_context(
-        action=lambda self,
-        *args,
-        **kwargs: f"{self.__class__.__name__}.unset_system_dark",
+        action=lambda self, *args, **kwargs: (
+            f"{self.__class__.__name__}.unset_system_dark"
+        ),
         log_to_statsd=False,
     )
     def unset_system_dark(self) -> Response:
@@ -786,4 +789,5 @@ class ThemeRestApi(BaseSupersetModelRestApi):
             ClearSystemDarkThemeCommand().run()
             return self.response(200, result="success")
         except Exception as ex:
-            return self.response_422(message=str(ex))
+            logger.exception("Unexpected error in DELETE /theme/unset_system_dark")
+            return self.response_500(message=str(ex))

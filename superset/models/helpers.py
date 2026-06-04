@@ -2388,8 +2388,11 @@ class ExploreMixin:  # pylint: disable=too-many-public-methods
                     from_sql = parsed_script.format()
 
             except Exception as ex:
-                # Log the error but don't fail - RLS application is best-effort
-                logger.warning("Failed to apply RLS to virtual dataset SQL: %s", ex)
+                logger.error(
+                    "Failed to apply RLS to virtual dataset SQL: %s",
+                    ex,
+                    exc_info=True,
+                )
 
         cte = self.db_engine_spec.get_cte_query(from_sql)
         from_clause = (

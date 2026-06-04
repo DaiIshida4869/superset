@@ -201,8 +201,8 @@ def api(f: Callable[..., FlaskResponse]) -> Callable[..., FlaskResponse]:
         except NoAuthorizationError:
             logger.warning("Api failed- no authorization", exc_info=True)
             return json_error_response(get_error_msg(), status=401)
-        except Exception as ex:  # pylint: disable=broad-except
-            logger.exception(ex)
+        except Exception:  # pylint: disable=broad-except
+            logger.exception("Unexpected API error")
             return json_error_response(get_error_msg())
 
     return functools.update_wrapper(wraps, f)
