@@ -1630,11 +1630,6 @@ msgstr "I puta he hapa"
 msgid "An error occurred saving dataset"
 msgstr "I puta he hapa i te tiakitanga o te rārangi raraunga"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "I puta he hapa i te whakatutukitanga o te pātai matohi"
-
 msgid "An error occurred while accessing the copy link."
 msgstr "I puta he hapa i te urunga ki te hono tārua."
 

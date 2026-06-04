@@ -1665,11 +1665,6 @@ msgstr "حدث خطأ"
 msgid "An error occurred saving dataset"
 msgstr "حدث خطأ أثناء حفظ مجموعة البيانات"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "حدث خطأ عند تشغيل استعلام التنبيه"
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "حدث خطأ أثناء الوصول إلى القيمة."

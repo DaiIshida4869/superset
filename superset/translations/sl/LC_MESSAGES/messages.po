@@ -1676,11 +1676,6 @@ msgstr "Prišlo je do napake"
 msgid "An error occurred saving dataset"
 msgstr "Pri shranjevanju podatkovnega seta je prišlo do napake"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Pri zaganjanju poizvedbe za opozorilo je prišlo do napake"
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Pri dostopanju do vednosti je prišlo do težave."

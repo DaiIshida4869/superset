@@ -1627,11 +1627,6 @@ msgstr "Er is een fout opgetreden"
 msgid "An error occurred saving dataset"
 msgstr "Er is een fout opgetreden bij het opslaan van dataset"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Er is een fout opgetreden bij het uitvoeren van de waarschuwing query"
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Er is een fout opgetreden tijdens het openen van de waarde."

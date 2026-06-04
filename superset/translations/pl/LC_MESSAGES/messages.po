@@ -1702,11 +1702,6 @@ msgid "An error occurred saving dataset"
 msgstr "Wystąpił błąd podczas zapisywania zestawu danych"
 
 #, fuzzy
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Wystąpił błąd podczas uruchamiania zapytania alarmowego"
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Wystąpił błąd podczas dostępu do wartości."

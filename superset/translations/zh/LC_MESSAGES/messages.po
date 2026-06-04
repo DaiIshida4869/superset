@@ -1576,11 +1576,6 @@ msgid "An error occurred saving dataset"
 msgstr "保存数据集时发生错误"
 
 #, fuzzy
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "精简日志时出错 "
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "访问值时出错。"

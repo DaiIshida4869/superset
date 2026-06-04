@@ -1625,11 +1625,6 @@ msgstr "یک خطا رخ داد"
 msgid "An error occurred saving dataset"
 msgstr "خطایی در هنگام ذخیره مجموعه داده رخ داد"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "هنگام اجرای کوئریی هشدار، خطایی رخ داد."
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "هنگام دسترسی به مقدار، خطایی رخ داد."

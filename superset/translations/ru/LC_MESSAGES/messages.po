@@ -1632,11 +1632,6 @@ msgstr "Произошла ошибка"
 msgid "An error occurred saving dataset"
 msgstr "Произошла ошибка при сохранении датасета"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Произошла ошибка при запуске запроса, возвращающего оповещение"
-
 msgid "An error occurred while accessing the copy link."
 msgstr "Произошла ошибка доступа к ссылке."
 

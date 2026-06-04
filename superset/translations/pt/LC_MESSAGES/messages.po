@@ -1594,11 +1594,6 @@ msgid "An error occurred saving dataset"
 msgstr "Ocorreu um erro ao criar a origem dos dados"
 
 #, fuzzy
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Ocorreu um erro ao renderizar a visualização: %s"
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Ocorreu um erro ao criar a origem dos dados"

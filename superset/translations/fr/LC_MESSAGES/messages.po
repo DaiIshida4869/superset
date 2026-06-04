@@ -1640,11 +1640,6 @@ msgstr "Un erreur s'est produite"
 msgid "An error occurred saving dataset"
 msgstr "Une erreur s'est produite durant la sauvegarde du ensemble de données"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Une erreur s'est produite lors du traitement des alertes "
-
 msgid "An error occurred while accessing the copy link."
 msgstr "Une erreur s'est produite durant l'accès au lien."
 

@@ -1562,11 +1562,6 @@ msgid "An error occurred saving dataset"
 msgstr "Errore nel creare il datasource"
 
 #, fuzzy
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Errore nel rendering della visualizzazione: %s"
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Errore nel creare il datasource"

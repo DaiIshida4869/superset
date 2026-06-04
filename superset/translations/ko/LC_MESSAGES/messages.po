@@ -1549,11 +1549,6 @@ msgid "An error occurred saving dataset"
 msgstr ""
 
 #, fuzzy
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "데이터 베이스 목록을 가져오는 도중 에러가 발생하였습니다."
-
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "데이터 베이스 목록을 가져오는 도중 에러가 발생하였습니다."

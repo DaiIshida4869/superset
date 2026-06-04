@@ -1645,11 +1645,6 @@ msgstr "Трапилась помилка"
 msgid "An error occurred saving dataset"
 msgstr "Не вдалося зберегти набір даних"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Не вдалося виконати запит для оповіщення"
-
 msgid "An error occurred while accessing the copy link."
 msgstr "Не вдалося доступитися до посилання."
 

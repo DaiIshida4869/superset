@@ -1664,11 +1664,6 @@ msgstr "Došlo k chybě"
 msgid "An error occurred saving dataset"
 msgstr "Při ukládání sady dat došlo k chybě"
 
-msgid ""
-"The alert query failed to execute. Verify that the SQL is valid and the "
-"database is accessible."
-msgstr "Při spuštění dotazu upozornění došlo k chybě"
-
 msgid "An error occurred while accessing the copy link."
 msgstr "Při přístupu k odkazu pro kopírování došlo k chybě."
 
