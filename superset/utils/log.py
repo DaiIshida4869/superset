@@ -196,7 +196,7 @@ class AbstractEventLogger(ABC):
                 if actual_user is not None:
                     db.session.add(actual_user)
                     user_id = get_user_id()
-            except Exception as ex:
+            except SQLAlchemyError as ex:
                 logging.warning("Failed to add user to db session: %s", ex)
                 user_id = None
         payload = collect_request_payload()
@@ -411,12 +411,12 @@ class DBEventLogger(AbstractEventLogger):
         try:
             db.session.bulk_save_objects(logs)
             db.session.commit()  # pylint: disable=consider-using-transaction
-        except SQLAlchemyError as ex:
+        except SQLAlchemyError:
             # Log errors but don't raise - logging failures should not break the
             # application. Common in tests where the session may be in prepared state or
             # db is locked
             logging.error("DBEventLogger failed to log event(s)")
-            logging.exception(ex)
+            logging.exception("Failed to persist log records")
             # Rollback to clean up the session state
             try:
                 db.session.rollback()  # pylint: disable=consider-using-transaction
