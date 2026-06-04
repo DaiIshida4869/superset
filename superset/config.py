@@ -1159,7 +1159,7 @@ STORE_CACHE_KEYS_IN_METADATA_DB = False
 # CORS Options
 # NOTE: enabling this requires installing the cors-related python dependencies
 # `pip install .[cors]` or `pip install apache_superset[cors]`, depending
-ENABLE_CORS = True
+ENABLE_CORS = False
 CORS_OPTIONS: dict[Any, Any] = {
     "origins": [
         "https://tile.openstreetmap.org",
@@ -1639,7 +1639,7 @@ SMTP_STARTTLS = True
 SMTP_SSL = False
 SMTP_USER = "superset"
 SMTP_PORT = 25
-SMTP_PASSWORD = "superset"  # noqa: S105
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "superset")  # noqa: S105
 SMTP_MAIL_FROM = "superset@superset.com"
 # If True creates a default SSL context with ssl.Purpose.CLIENT_AUTH using the
 # default system root CA certificates.
@@ -2202,8 +2202,8 @@ TALISMAN_CONFIG = {
         "script-src": ["'self'", "'strict-dynamic'"],
     },
     "content_security_policy_nonce_in": ["script-src"],
-    "force_https": False,
-    "session_cookie_secure": False,
+    "force_https": True,
+    "session_cookie_secure": True,
 }
 # React requires `eval` to work correctly in dev mode
 TALISMAN_DEV_CONFIG = {
