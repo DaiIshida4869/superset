@@ -1480,6 +1480,11 @@ msgstr ""
 msgid "An error occurred saving dataset"
 msgstr ""
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr ""
+
 msgid "An error occurred while accessing the copy link."
 msgstr ""
 

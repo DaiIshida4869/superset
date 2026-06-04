@@ -1561,6 +1561,11 @@ msgstr ""
 msgid "An error occurred saving dataset"
 msgstr "Errore nel creare il datasource"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "Errore nel rendering della visualizzazione: %s"
+
 #, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."

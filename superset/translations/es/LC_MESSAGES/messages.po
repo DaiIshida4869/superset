@@ -1688,6 +1688,11 @@ msgstr "Se ha producido un error"
 msgid "An error occurred saving dataset"
 msgstr "Se ha producido un error al guardar el conjunto de datos"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "Se ha producido un error al ejecutar la consulta de alerta"
+
 msgid "An error occurred while accessing the copy link."
 msgstr "Se ha producido un error al acceder al enlace de copia."
 

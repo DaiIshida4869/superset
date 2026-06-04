@@ -1575,6 +1575,11 @@ msgstr "發生了一個錯誤"
 msgid "An error occurred saving dataset"
 msgstr "保存數據集時發生錯誤"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "精简日誌時出錯 "
+
 #, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."

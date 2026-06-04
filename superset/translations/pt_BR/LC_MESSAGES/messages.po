@@ -1698,6 +1698,11 @@ msgstr "Um erro ocorreu"
 msgid "An error occurred saving dataset"
 msgstr "Ocorreu um erro ao salvar conjunto de dados"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "Ocorreu um erro ao podar os registos"
+
 #, fuzzy
 #, fuzzy
 msgid "An error occurred while accessing the copy link."

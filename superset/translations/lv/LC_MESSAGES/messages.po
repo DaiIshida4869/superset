@@ -1649,6 +1649,11 @@ msgstr "Radās kļūda"
 msgid "An error occurred saving dataset"
 msgstr "Radās kļūda, saglabājot datu kopu"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "Radās kļūda, izpildot brīdinājuma vaicājumu"
+
 msgid "An error occurred while accessing the copy link."
 msgstr "Radās kļūda, piekļūstot kopēšanas saitei."
 

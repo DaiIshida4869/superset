@@ -229,8 +229,8 @@ class AlertCommand(BaseCommand):
             # users, so we raise a generic message.
             raise AlertQueryError(
                 message=_(
-                    "The alert query failed to execute. "
-                    "Verify that the SQL is valid and the database is accessible."
+                    "The alert query could not be executed. "
+                    "Check that the SQL is valid and the database is reachable."
                 )
             ) from ex
 

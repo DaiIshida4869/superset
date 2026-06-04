@@ -1500,6 +1500,11 @@ msgstr "Bir hata oluştu"
 msgid "An error occurred saving dataset"
 msgstr "Verisetini kaydederken bir hata oluştu"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr ""
+
 #, fuzzy
 msgid "An error occurred while accessing the copy link."
 msgstr "Verisetini kaydederken bir hata oluştu"

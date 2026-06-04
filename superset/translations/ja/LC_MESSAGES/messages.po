@@ -1525,6 +1525,11 @@ msgstr "エラーが発生しました"
 msgid "An error occurred saving dataset"
 msgstr "データセットの保存中にエラーが発生しました"
 
+msgid ""
+"The alert query could not be executed. Check that the SQL is valid and the "
+"database is reachable."
+msgstr "アラートクエリの実行中にエラーが発生しました"
+
 msgid "An error occurred while accessing the copy link."
 msgstr "コピーリンクへのアクセス中にエラーが発生しました。"
 
