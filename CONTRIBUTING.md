@@ -36,3 +36,16 @@ The Developer Portal includes comprehensive guides for:
 - [Development How-tos](https://superset.apache.org/developer_portal/contributing/howtos)
 
 Source for the Developer Portal documentation is [located here](https://github.com/apache/superset/tree/master/docs/developer_portal).
+
+## Troubleshooting
+
+**Flask server fails to start with `ModuleNotFoundError: No module named 'superset'`**
+
+This usually means the Superset package hasn't been installed in editable (development) mode.
+From the repository root, run:
+
+```bash
+pip install -e .
+```
+
+Then retry starting the server with `superset run`.
