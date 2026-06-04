@@ -50,6 +50,6 @@ Note that:
 
 It's possible to configure database queries for charts to operate in `async` mode. This is especially useful for dashboards with many charts that may otherwise be affected by browser connection limits. To enable async queries for dashboards and Explore, the following dependencies are required:
 
-- Redis 5.0+ (the feature utilizes [Redis Streams](https://redis.io/topics/streams-intro))
+- Redis 5.0+ (the feature utilizes [Redis Streams](https://redis.io/docs/latest/develop/data-types/streams/))
 - Cache backends enabled via the `CACHE_CONFIG` and `DATA_CACHE_CONFIG` config settings
 - Celery workers configured and running to process async tasks

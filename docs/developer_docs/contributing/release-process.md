@@ -463,7 +463,7 @@ Credit:
 - [Version Strategy Discussion](https://github.com/apache/superset/discussions)
 
 ### Tools
-- [Release Scripts](https://github.com/apache/superset/tree/master/scripts/release)
+- [Release Scripts](https://github.com/apache/superset/tree/master/scripts)
 - [Superset Repository Scripts](https://github.com/apache/superset/tree/master/scripts)
 
 Next: Return to [Contributing Overview](./overview.md)
